@@ -1,0 +1,24 @@
+// documentation
+// https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lambda/index.html
+
+
+ aws --version
+
+ // Lambda function list
+ aws lambda list-functions
+ aws lambda get-function --funtion-name myfunction
+
+
+ // Invoke lambda functions Syncronously / Asyncronously
+ aws lambda invoke --function-name testFunction --cli-binary-format  raw-in-base64-out --payload '{ "key": "value" }' response.json
+
+
+ // Create A function using cli
+
+ steps:
+ 1. create execution role
+ 2. create function code
+ 3. create deployment package with zip function code
+ 4. crete lambda function
+ 5. invoke function
+ 6. check logs
