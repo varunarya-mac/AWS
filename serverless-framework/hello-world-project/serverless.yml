@@ -1,0 +1,10 @@
+service: hello-world-project
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  hello:
+    handler: index.hello
